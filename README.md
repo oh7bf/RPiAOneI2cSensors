@@ -8,10 +8,12 @@ version of the breakout board you are using.
 Files
 =====
 
+```textile
 README.md                         - this file
 RPiAOneI2CSensors-B_Cu.pdf        - back copper
 RPiAOneI2CSensors-F_SilkS.pdf     - top silk screen
 RPiAOneI2CSensors.lst             - component list
 RPiAOneI2CSensors.pdf             - circuit diagram
 RPiAOneI2CSensors.sch             - circuit diagram
+```
 
