@@ -1,11 +1,13 @@
 # RPiAOneI2cSensors
-PCB for Raspberry Pi for connecting external I2C sensors using modular 4P4C
-connectors. HTU21D and BMP180 are on the same board. The board is one sided
-with 9 jumper wires for easier home production.
+Printed circuit board for Raspberry Pi (TM) for connecting external I2C 
+sensors using modular 4P4C connectors. Breakout boards from Adafruit and 
+Sparkfun can be wired for testing. By soldering 20 pins female header on 
+the board the I2C modules can be re-used in an other project or connected 
+with cable using the 4P4C modular connectors. 
 
-NOTE: The breakout board pin order may change with different versions. 
-Check first that the adapter board in this repository is suitable for the
-version of the breakout board you are using.
+NOTE: Careful soldering is needed when using the board. Double check the 
+connections since short circuit on power supply lines can damage the
+Raspberry Pi permanently. Multimeter is handy when checking the wiring.
 
 Parts
 =====
@@ -14,11 +16,10 @@ Parts
 D1,D2         zener 3V3        
 J1,J2,J3      4P4C modular        
 JP1           jumper      
-P1            40 pins female header
+P0            2x20 pins female header
+              20 pins female header (not shown on diagram)
 R1,R2         100 ohm        
-U1            Sparkfun HTU21D 
-U2            Adafruit BMP180  
-VR1           polyfuse 100 mA (or smaller)       
+VR1           Resettable Fuse PPTC 1206 60V 0.05A       
 ```
 
 Files
@@ -27,14 +28,15 @@ Files
 ```textile
 README.md                         - this file
 RPiAOneI2CSensors-B_Cu.pdf        - back copper
-RPiAOneI2CSensors-B_Cu.pho        - back copper Gerber file
+RPiAOneI2CSensors-B_Cu.gbl        - back copper Gerber file
+RPiAOneI2CSensors-B_Mask.gbs      - bottom solder stop mask
+RPiAOneI2CSensors-F_Cu.pdf        - top copper
+RPiAOneI2CSensors-F_Cu.gtl        - top copper
+RPiAOneI2CSensors-F_Mask.gts      - top solder stop mask
 RPiAOneI2CSensors-F_SilkS.pdf     - top silk screen
-RPiAOneI2CSensors-F_SilkS.pho     - top silk screen Gerber file
-RPiAOneI2CSensors-NPTH-drl_map.pho - drill map Gerber file
-RPiAOneI2CSensors-NPTH.drl        - drill file
-RPiAOneI2CSensors-drl_map.pho     - drill map Gerber file
+RPiAOneI2CSensors-F_SilkS.gto     - top silk screen Gerber file
 RPiAOneI2CSensors.drl             - drill file
-RPiAOneI2CSensors.lst             - component list
+RPiAOneI2CSensors-NPTH.drl        - drill file
 RPiAOneI2CSensors.pdf             - circuit diagram
 RPiAOneI2CSensors.sch             - circuit diagram
 ```
